@@ -1,0 +1,219 @@
+<?xml version="1.0"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">	
+
+
+	<xsd:element name = "TimeCards">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref = "EnterpriseDtls" minOccurs = "1" maxOccurs = "1"/>
+				<xsd:element ref = "Projects" minOccurs = "1" maxOccurs = "1"/>
+				<xsd:element ref = "Employees" minOccurs = "1" maxOccurs = "1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name = "EnterpriseDtls">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref = "Img" minOccurs = "1" maxOccurs = "1"/>
+			</xsd:sequence>
+			    <xsd:attribute name="Enterprise_Name" type="xsd:string" use="optional"/>
+			    <xsd:attribute name="Address" type="xsd:string" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name = "Projects">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element ref = "Project" minOccurs = "1" maxOccurs = "unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+  	
+	<xsd:element name = "Employees">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element ref = "Employee" minOccurs = "1" maxOccurs = "unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name = "Employee">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element ref = "Name" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "Manager" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "Belongs_to_dept" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "Dates_of_week" minOccurs = "1" maxOccurs = "unbounded"/>
+			</xsd:sequence>
+			
+	<xsd:attribute name="ID" type="xsd:string" use="required"/>
+
+				<xsd:attribute name="Employee_type" use="optional">
+					<xsd:simpleType>
+						<xsd:restriction base = "xsd:string">
+							<xsd:enumeration value = "permanent"/>
+							<xsd:enumeration value = "temporary"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+
+
+	<xsd:element name = "Dates_of_week">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element ref = "timesheet" minOccurs = "1" maxOccurs = "unbounded"/>
+					<xsd:element ref = "Rates_per_hour" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "All_TotalHours" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "Tasks" minOccurs = "1" maxOccurs = "1"/>
+			</xsd:sequence>
+					<xsd:attribute name="period" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name = "timesheet">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element ref = "Date" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "Start_Time" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Finish_Time" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Total_Break_Time" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Regular_Hours" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Overtime_Hours" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Sick" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Vacation" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Holiday" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Other" minOccurs = "0" maxOccurs = "1"/>
+					<xsd:element ref = "Total_Hours" minOccurs = "0" maxOccurs = "1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name = "Rates_per_hour">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element ref = "rate_per_regular_hrs" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "rate_per_overtime_hrs" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "rate_per_sick_hrs" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "rate_per_vacation_hrs" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "rate_per_holiday_hrs" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "rate_per_other_hrs" minOccurs = "1" maxOccurs = "1"/>
+			</xsd:sequence>
+				<xsd:attribute name="currency" use="optional">
+					<xsd:simpleType>
+						<xsd:restriction base = "xsd:string">
+							<xsd:enumeration value = "euro"/>
+							<xsd:enumeration value = "USA_dollar"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name = "All_TotalHours">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element ref = "total_Regular_Hours" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "total_Overtime_Hours" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "total_sick_Hours" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "total_vacation_Hours" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "total_holiday_Hours" minOccurs = "1" maxOccurs = "1"/>
+					<xsd:element ref = "total_other_Hours" minOccurs = "1" maxOccurs = "1"/>
+			</xsd:sequence>
+					<xsd:attribute name="hours" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name = "Tasks">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element ref = "Task" minOccurs = "0" maxOccurs = "unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+  	<xsd:element name="Img">
+  		<xsd:complexType>
+  					<xsd:attribute name="src." use="required">
+						<xsd:simpleType  id="ENTITY">
+ 							<xsd:restriction base="xsd:NCName"/>
+						</xsd:simpleType>
+  					</xsd:attribute>
+  		</xsd:complexType>
+  	</xsd:element>
+	<xsd:element name = "Project">
+		<xsd:complexType>
+					<xsd:attribute name="name" type="xsd:string" use="required"/>
+					<xsd:attribute name="project_ID" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name = "Name" type = "xsd:string"/>
+	<xsd:element name = "Manager" type = "xsd:string"/>
+	<xsd:element name = "Belongs_to_dept" type = "xsd:string"/>
+	<xsd:element name = "Date" type = "xsd:string"/>
+	<xsd:element name = "Start_Time" type = "xsd:string"/>
+	<xsd:element name = "Finish_Time" type = "xsd:string"/>
+	<xsd:element name = "Total_Break_Time">
+  		<xsd:complexType>
+  			<xsd:simpleContent>
+  				<xsd:extension base = "xsd:string">
+  					<xsd:attribute name="unit" type="xsd:string" use="required"/>
+  				</xsd:extension>
+  			</xsd:simpleContent>
+  		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name = "Regular_Hours" type = "xsd:string"/>
+	<xsd:element name = "Overtime_Hours" type = "xsd:string"/>
+	<xsd:element name = "Sick" type = "xsd:string"/>
+	<xsd:element name = "Vacation" type = "xsd:string"/>
+	<xsd:element name = "Holiday" type = "xsd:string"/>
+	<xsd:element name = "Other">
+		<xsd:complexType>
+			<xsd:simpleContent>
+			<xsd:extension base = "xsd:string">
+			<xsd:attribute name="type" use = "optional">
+				<xsd:simpleType>
+					<xsd:restriction base = "xsd:string">
+							<xsd:enumeration value = "work_from_home"/>
+							<xsd:enumeration value = "be_in_Seminar"/>
+							<xsd:enumeration value = "work_at_Customer"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:extension>
+		</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name = "Total_Hours" type = "xsd:string"/>
+	<xsd:element name = "rate_per_regular_hrs" type = "xsd:string"/>
+	<xsd:element name = "rate_per_overtime_hrs" type = "xsd:string"/>
+	<xsd:element name = "rate_per_sick_hrs" type = "xsd:string"/>
+	<xsd:element name = "rate_per_vacation_hrs" type = "xsd:string"/>
+	<xsd:element name = "rate_per_holiday_hrs" type = "xsd:string"/>
+	<xsd:element name = "rate_per_other_hrs" type = "xsd:string"/>
+	<xsd:element name = "total_Regular_Hours" type = "xsd:string"/>
+	<xsd:element name = "total_Overtime_Hours" type = "xsd:string"/>
+	<xsd:element name = "total_sick_Hours" type = "xsd:string"/>
+	<xsd:element name = "total_vacation_Hours" type = "xsd:string"/>
+	<xsd:element name = "total_holiday_Hours" type = "xsd:string"/>
+	<xsd:element name = "total_other_Hours" type = "xsd:string"/>
+	<xsd:element name="Task">
+		<xsd:complexType>
+			   		<xsd:attribute name="project" type="xsd:string" use="required"/>
+			   		<xsd:attribute name="nameTask" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

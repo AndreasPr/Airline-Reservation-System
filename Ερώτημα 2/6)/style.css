@@ -1,0 +1,159 @@
+Dates_of_week:before{
+	display: table;
+	content: attr(period);
+	margin-top:1%;
+
+}
+Name
+{
+	font-weight: bolder;
+	color: purple;
+	display: block;
+	margin-top:3%;
+}
+timesheet
+{
+	display: table-row;
+	border: 1px solid gray;
+}
+Date
+{
+	display: table-cell;
+		border: 1px solid gray;
+
+}
+Start_Time
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Finish_Time
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Total_Break_Time
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Regular_Hours
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Overtime_Hours
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Sick
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Vacation
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Holiday
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Other
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Total_Hours
+{
+	display: table-cell;
+	border: 1px solid gray;
+}
+Rates_per_hour
+{
+	display: none;
+	border: 1px solid gray;
+}
+rate_per_regular_hrs
+{
+	display: none;
+	border: 1px solid gray;
+}
+rate_per_overtime_hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+rate_per_sick_hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+rate_per_vacation_hrs
+{
+	display: none;
+	border: 1px solid gray;
+}
+rate_per_holiday_hrs
+{
+	display: none;
+	border: 1px solid gray;
+}
+rate_per_other_hrs
+{
+	display: none;
+	border: 1px solid gray;
+}
+All_Total_Hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+total_Regular_Hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+total_Overtime_Hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+total_sick_Hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+total_vacation_Hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+total_holiday_Hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+total_other_Hours
+{
+	display: none;
+	border: 1px solid gray;
+}
+Manager{display: none;}
+
+Belongs_to_dept{display: none;}
+
+[period = " 01/01/18 - 07/01/18"]
+{
+	 background: yellow;
+	 font-weight: bolder;
+}
+[period = " 08/01/2018 - 14/01/18 "]
+{
+	 background: yellow;
+	 font-weight: bolder;
+}
+

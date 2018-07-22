@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!ELEMENT TimeCards (EnterpriseDtls,Projects,Employees)>
+<!ELEMENT Projects (Project+)>
+<!ELEMENT Project (#PCDATA)>
+<!ELEMENT Employees (Employee+)>
+<!ELEMENT EnterpriseDtls (Img)>
+<!ELEMENT Employee (Name,Manager,Belongs_to_dept,Dates_of_week+)>
+<!ELEMENT Dates_of_week (timesheet+,Rates_per_hour,All_TotalHours,Tasks)>
+<!ELEMENT timesheet (Date,Start_Time?,Finish_Time?,Total_Break_Time?,Regular_Hours?,Overtime_Hours?,Sick?,Vacation?,Holiday?,Other?,Total_Hours)>
+<!ELEMENT Rates_per_hour (rate_per_regular_hrs,rate_per_overtime_hrs,rate_per_sick_hrs,rate_per_vacation_hrs,rate_per_holiday_hrs,rate_per_other_hrs)>
+<!ELEMENT All_TotalHours (total_Regular_Hours,total_Overtime_Hours,total_sick_Hours,total_vacation_Hours,total_holiday_Hours,total_other_Hours)>
+<!ELEMENT Tasks (Task*)>
+<!ELEMENT Task (assessment)>
+
+
+<!ELEMENT Img EMPTY>
+<!ATTLIST EnterpriseDtls Enterprise_Name CDATA #IMPLIED>
+<!ATTLIST EnterpriseDtls Address CDATA #IMPLIED>
+<!ATTLIST Img src. ENTITY #REQUIRED>
+<!NOTATION JPG SYSTEM "ShowJPG.exe">
+<!ENTITY Picture SYSTEM "picture.jpg" NDATA JPG>
+
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Manager (#PCDATA)>
+<!ELEMENT Belongs_to_dept (#PCDATA)>
+<!ELEMENT Date (#PCDATA)>
+<!ELEMENT Start_Time (#PCDATA)>
+<!ELEMENT Finish_Time (#PCDATA)>
+<!ELEMENT Total_Break_Time (#PCDATA)>
+<!ELEMENT Regular_Hours (#PCDATA)>
+<!ELEMENT Overtime_Hours (#PCDATA)>
+<!ELEMENT Sick (#PCDATA)>
+<!ELEMENT Vacation (#PCDATA)>
+<!ELEMENT Holiday (#PCDATA)>
+<!ELEMENT Other (#PCDATA)>
+<!ELEMENT Total_Hours (#PCDATA)>
+<!ELEMENT rate_per_regular_hrs (#PCDATA)>
+<!ELEMENT rate_per_overtime_hrs (#PCDATA)>
+<!ELEMENT rate_per_sick_hrs (#PCDATA)>
+<!ELEMENT rate_per_vacation_hrs (#PCDATA)>
+<!ELEMENT rate_per_holiday_hrs (#PCDATA)>
+<!ELEMENT rate_per_other_hrs (#PCDATA)>
+<!ELEMENT total_Regular_Hours (#PCDATA)>
+<!ELEMENT total_Overtime_Hours (#PCDATA)>
+<!ELEMENT total_sick_Hours (#PCDATA)>
+<!ELEMENT total_vacation_Hours (#PCDATA)>
+<!ELEMENT total_holiday_Hours (#PCDATA)>
+<!ELEMENT total_other_Hours (#PCDATA)>
+<!ELEMENT assessment (manager_name,comment?)>
+<!ELEMENT manager_name (#PCDATA)>
+<!ELEMENT comment (#PCDATA)>
+
+
+<!ATTLIST Employee ID ID #REQUIRED>
+<!ATTLIST Employee Employee_type (permanent | temporary) #IMPLIED>
+<!ATTLIST Total_Break_Time unit CDATA #REQUIRED>
+<!ATTLIST Other type (work_from_home | be_in_Seminar | work_at_Customer) "work_from_home">
+<!ATTLIST Rates_per_hour currency (euro | USA_dollar) #IMPLIED>
+<!ATTLIST All_TotalHours hours CDATA #REQUIRED>
+
+<!ATTLIST Project name CDATA #REQUIRED>
+<!ATTLIST Project project_ID ID #REQUIRED>
+<!ATTLIST Task project IDREF #IMPLIED>
+
+<!ATTLIST Task nameTask CDATA #REQUIRED>
+<!ATTLIST Dates_of_week period CDATA #REQUIRED>
+
+<!ATTLIST Task level_of_difficulty (1 | 2 | 3 | 4 | 5) #IMPLIED>
+<!ATTLIST Task rate_of_achievement CDATA #REQUIRED>
+<!ATTLIST assessment grade (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10) "5">

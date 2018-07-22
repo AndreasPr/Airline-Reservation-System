@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!ELEMENT InvoiceList (Invoice | Receipt)*>
+<!ELEMENT Invoice (Company,Item,Date,Billing_Address,Shipping_Address?,TotalAmount)>
+<!ELEMENT Company (Company_Name,AFM,DOY,Address,Tel?)>
+<!ELEMENT Company_Name (#PCDATA)>
+<!ELEMENT AFM (#PCDATA)>
+<!ELEMENT DOY (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Tel (#PCDATA)>
+<!ELEMENT Item (Description,Initial_Price,Amount,in_discount?)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Initial_Price (#PCDATA)>
+<!ELEMENT Amount (#PCDATA)>
+<!ELEMENT in_discount (discount_rate,amount_after_discount)>
+<!ELEMENT discount_rate (#PCDATA)>
+<!ELEMENT amount_after_discount (#PCDATA)>
+<!ELEMENT Date (#PCDATA)>
+<!ELEMENT Billing_Address (#PCDATA)>
+<!ELEMENT Shipping_Address (#PCDATA)>
+<!ELEMENT TotalAmount (#PCDATA)>
+<!ELEMENT Receipt (Customer,Item,Date,Billing_Address,Shipping_Address?,TotalAmount)>
+<!ELEMENT Customer (First_Name,Middle_Name,Last_Name)>
+<!ELEMENT First_Name (#PCDATA)>
+<!ELEMENT Middle_Name (#PCDATA)>
+<!ELEMENT Last_Name (#PCDATA)>
+<!ATTLIST Invoice InvCodeNo ID #REQUIRED>
+<!ATTLIST Item Quantity CDATA "1">
+<!ATTLIST Item item_category (hw | sw) "hw">
+<!ATTLIST Receipt CodeNo ID #REQUIRED>

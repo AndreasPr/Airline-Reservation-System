@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE InvoiceList SYSTEM "erothma1.dtd">
+<InvoiceList>
+<Invoice InvCodeNo="A50">
+	<Company>
+		<Company_Name>Butterfly</Company_Name>
+		<AFM>85332710</AFM>
+		<DOY>Piraeus</DOY>
+		<Address>Androutsou 83</Address>
+		<Tel>2104046136</Tel>
+	</Company>
+	<Item item_category = "hw" Quantity = "3">
+		<Description>The best Item in the world</Description>
+		<Initial_Price>15</Initial_Price>
+		<Amount>45</Amount>
+		<in_discount>
+			<discount_rate></discount_rate>
+			<amount_after_discount></amount_after_discount>
+		</in_discount>
+	</Item>
+	<Date>02/05/2018</Date>
+	<Billing_Address>Fragouli Foutri 49</Billing_Address>
+	<Shipping_Address></Shipping_Address>
+	<TotalAmount>45</TotalAmount>
+</Invoice>
+<Receipt CodeNo="A40">
+	<Customer>
+		<First_Name>Andreas</First_Name>
+		<Middle_Name>Iosif</Middle_Name>
+		<Last_Name></Last_Name>
+	</Customer>
+
+	<Item item_category = "hw" Quantity = "1">
+		<Description>The best Item in the world</Description>
+		<Initial_Price>15</Initial_Price>
+		<Amount>15</Amount>
+		<in_discount>
+			<discount_rate></discount_rate>
+			<amount_after_discount></amount_after_discount>
+		</in_discount>		
+	</Item>
+	<Date>03/05/2018</Date>
+	<Billing_Address>Agaphs 17</Billing_Address>
+	<Shipping_Address>Peukon 59</Shipping_Address>
+	<TotalAmount>15</TotalAmount>
+</Receipt>
+</InvoiceList>

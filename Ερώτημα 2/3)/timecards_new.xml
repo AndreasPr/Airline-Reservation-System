@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE TimeCards SYSTEM "timecards_new.dtd"> 
+
+<TimeCards>
+	<EnterpriseDtls Enterprise_Name = "Enter Company" Address = "Antigonis 25, 15235, Athens, Greece">
+		<Img src.="Picture"/>
+	</EnterpriseDtls>
+	
+	<Projects>
+		<Project project_ID = "P1" name = "Website Rollout"/>
+		<Project project_ID = "P2" name = "Admin"/>
+		<Project project_ID = "P3" name = "Advertising"/>
+	</Projects>
+
+	<Employees>
+		<Employee ID = "E1">
+			<Name>Eleftheria Mitsi</Name>
+			<Manager>George Papadopoulos</Manager>
+			<Belongs_to_dept>IT Department</Belongs_to_dept>
+			<Dates_of_week period=" 01/01/18 - 07/01/18">
+				<timesheet>
+					<Date>1/1/2018</Date>
+					<Holiday>8</Holiday>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>2/1/2018</Date>
+					<Sick>8</Sick>
+					<Other></Other>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>3/1/2018</Date>
+					<Vacation>8</Vacation>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>4/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit = "minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>5/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Other type = "work_from_home">10</Other>
+					<Total_Hours>10</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>6/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>7:00pm</Finish_Time>
+					<Total_Break_Time unit = "minutes">0</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>2</Overtime_Hours>
+					<Total_Hours>10</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>7/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>7:00pm</Finish_Time>
+					<Other type = "be_in_Seminar">11</Other>
+					<Total_Hours>11</Total_Hours>
+				</timesheet>
+
+
+				<Rates_per_hour currency = "euro">
+					<rate_per_regular_hrs>20.00</rate_per_regular_hrs>
+					<rate_per_overtime_hrs>30.00</rate_per_overtime_hrs>
+					<rate_per_sick_hrs>20.00</rate_per_sick_hrs>
+					<rate_per_vacation_hrs>20.00</rate_per_vacation_hrs>
+					<rate_per_holiday_hrs>20.00</rate_per_holiday_hrs>
+					<rate_per_other_hrs>20.00</rate_per_other_hrs>
+				</Rates_per_hour>
+				<All_TotalHours hours = "64">
+					<total_Regular_Hours>16</total_Regular_Hours>
+					<total_Overtime_Hours>3</total_Overtime_Hours>
+					<total_sick_Hours>8</total_sick_Hours>
+					<total_vacation_Hours>8</total_vacation_Hours>
+					<total_holiday_Hours>8</total_holiday_Hours>
+					<total_other_Hours>21</total_other_Hours>
+				</All_TotalHours>
+				<Tasks>
+					<Task project = "P1" nameTask = "Off site meetings"/>
+					<Task project = "P2" nameTask = "Analysis Complete"/>
+				</Tasks>
+			</Dates_of_week>
+
+
+			<Dates_of_week period = " 08/01/2018 - 14/01/18 ">
+				<timesheet>
+					<Date>8/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit = "minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>9/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit = "minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>10/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit = "minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>11/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>12/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>13/1/2018</Date>
+					<Holiday>8</Holiday>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>14/1/2018</Date>
+					<Holiday>8</Holiday>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<Rates_per_hour currency = "euro">
+					<rate_per_regular_hrs>20.00</rate_per_regular_hrs>
+					<rate_per_overtime_hrs>30.00</rate_per_overtime_hrs>
+					<rate_per_sick_hrs>20.00</rate_per_sick_hrs>
+					<rate_per_vacation_hrs>20.00</rate_per_vacation_hrs>
+					<rate_per_holiday_hrs>20.00</rate_per_holiday_hrs>
+					<rate_per_other_hrs>20.00</rate_per_other_hrs>
+				</Rates_per_hour>
+				<All_TotalHours hours = "60">
+					<total_Regular_Hours>40</total_Regular_Hours>
+					<total_Overtime_Hours>4</total_Overtime_Hours>
+					<total_sick_Hours>0</total_sick_Hours>
+					<total_vacation_Hours>0</total_vacation_Hours>
+					<total_holiday_Hours>16</total_holiday_Hours>
+					<total_other_Hours>0</total_other_Hours>
+				</All_TotalHours>
+				<Tasks>
+					<Task project = "P1" nameTask = "Upload Website Changes"/>
+				</Tasks>
+			</Dates_of_week>
+
+		</Employee>
+	
+		<Employee ID = "E2">
+			<Name>Stiliani Lamda</Name>
+			<Manager>Leonidas Kourvaras</Manager>
+			<Belongs_to_dept>IT Department</Belongs_to_dept>
+			<Dates_of_week period=" 01/01/18 - 07/01/18">
+				<timesheet>
+					<Date>1/1/2018</Date>
+					<Holiday>8</Holiday>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>2/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit="minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>3/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit="minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>4/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Other type = "work_at_Customer">10</Other>
+					<Total_Hours>10</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>5/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit="minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>6/1/2018</Date>
+					<Vacation>8</Vacation>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>7/1/2018</Date>
+					<Vacation>8</Vacation>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<Rates_per_hour currency = "euro">
+					<rate_per_regular_hrs>20.00</rate_per_regular_hrs>
+					<rate_per_overtime_hrs>30.00</rate_per_overtime_hrs>
+					<rate_per_sick_hrs>20.00</rate_per_sick_hrs>
+					<rate_per_vacation_hrs>20.00</rate_per_vacation_hrs>
+					<rate_per_holiday_hrs>20.00</rate_per_holiday_hrs>
+					<rate_per_other_hrs>20.00</rate_per_other_hrs>
+				</Rates_per_hour>
+				<All_TotalHours hours = "60">
+					<total_Regular_Hours>24</total_Regular_Hours>
+					<total_Overtime_Hours>2</total_Overtime_Hours>
+					<total_sick_Hours>0</total_sick_Hours>
+					<total_vacation_Hours>16</total_vacation_Hours>
+					<total_holiday_Hours>8</total_holiday_Hours>
+					<total_other_Hours>10</total_other_Hours>
+				</All_TotalHours>
+				<Tasks>
+					<Task project = "P3" nameTask = "Software Design"/>
+				</Tasks>
+
+			</Dates_of_week>
+
+		</Employee>
+
+        
+        <Employee ID="E3"> 
+			<Name>Maria Sotiriou</Name>
+			<Manager>George Mandras</Manager>
+			<Belongs_to_dept>Advertising Department</Belongs_to_dept>
+			<Dates_of_week period=" 01/01/18 - 07/01/18">
+				<timesheet>
+					<Date>1/1/2018</Date>
+					<Holiday>8</Holiday>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>2/1/2018</Date>
+					<Start_Time>8:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit="minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>3/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit="minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>4/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>5/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Overtime_Hours>1</Overtime_Hours>
+					<Total_Hours>9</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>6/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit="minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<timesheet>
+					<Date>7/1/2018</Date>
+					<Start_Time>9:00am</Start_Time>
+					<Finish_Time>6:00pm</Finish_Time>
+					<Total_Break_Time unit="minutes">60</Total_Break_Time>
+					<Regular_Hours>8</Regular_Hours>
+					<Total_Hours>8</Total_Hours>
+				</timesheet>
+
+				<Rates_per_hour currency = "euro">
+					<rate_per_regular_hrs>30.00</rate_per_regular_hrs>
+					<rate_per_overtime_hrs>40.00</rate_per_overtime_hrs>
+					<rate_per_sick_hrs>30.00</rate_per_sick_hrs>
+					<rate_per_vacation_hrs>30.00</rate_per_vacation_hrs>
+					<rate_per_holiday_hrs>30.00</rate_per_holiday_hrs>
+					<rate_per_other_hrs>35.00</rate_per_other_hrs>
+				</Rates_per_hour>
+				<All_TotalHours hours = "59">
+					<total_Regular_Hours>48</total_Regular_Hours>
+					<total_Overtime_Hours>3</total_Overtime_Hours>
+					<total_sick_Hours>0</total_sick_Hours>
+					<total_vacation_Hours>0</total_vacation_Hours>
+					<total_holiday_Hours>8</total_holiday_Hours>
+					<total_other_Hours>0</total_other_Hours>
+				</All_TotalHours>
+				<Tasks>
+					<Task project = "P3" nameTask = "Software Design"/>
+				</Tasks>
+			</Dates_of_week>
+		 </Employee>
+
+	</Employees>
+</TimeCards>
+
+

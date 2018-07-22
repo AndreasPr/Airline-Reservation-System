@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE InvoiceList 
+[
+	<!ELEMENT InvoiceList (Invoice | Receipt)*>
+	<!ELEMENT Invoice (Company,Item,Date,Billing_Address,Shipping_Address?,TotalAmount)>
+	<!ELEMENT Company (Company_Name,AFM,DOY,Address,Tel?)>
+	<!ELEMENT Company_Name (#PCDATA)>
+	<!ELEMENT AFM (#PCDATA)>
+	<!ELEMENT DOY (#PCDATA)>
+	<!ELEMENT Address (#PCDATA)>
+	<!ELEMENT Tel (#PCDATA)>
+	<!ELEMENT Item (Description,Initial_Price,Amount,in_discount?)>
+	<!ELEMENT Description (#PCDATA)>
+	<!ELEMENT Initial_Price (#PCDATA)>
+	<!ELEMENT Amount (#PCDATA)>
+	<!ELEMENT in_discount (discount_rate,amount_after_discount)>
+	<!ELEMENT discount_rate (#PCDATA)>
+	<!ELEMENT amount_after_discount (#PCDATA)>
+	<!ELEMENT Date (#PCDATA)>
+	<!ELEMENT Billing_Address (#PCDATA)>
+	<!ELEMENT Shipping_Address (#PCDATA)>
+	<!ELEMENT TotalAmount (#PCDATA)>
+	<!ELEMENT Receipt (Customer,Item,Date,Billing_Address,Shipping_Address?,TotalAmount)>
+	<!ELEMENT Customer (First_Name,Middle_Name,Last_Name)>
+	<!ELEMENT First_Name (#PCDATA)>
+	<!ELEMENT Middle_Name (#PCDATA)>
+	<!ELEMENT Last_Name (#PCDATA)>
+	<!ATTLIST Invoice InvCodeNo ID #REQUIRED>
+	<!ATTLIST Item Quantity CDATA "1">
+	<!ATTLIST Item item_category (hw | sw) "hw">
+	<!ATTLIST Receipt CodeNo ID #REQUIRED>
+]>
+<InvoiceList>
+<Invoice InvCodeNo="50">
+	<Company>
+		<Company_Name>Butterfly</Company_Name>
+		<AFM>85332710</AFM>
+		<DOY>Piraeus</DOY>
+		<Address>Androutsou 83</Address>
+		<Tel>2104046136</Tel>
+	</Company>
+	<Item item_category = "hw" Quantity = "3">
+		<Description>The best Item in the world</Description>
+		<Initial_Price>15</Initial_Price>
+		<Amount>45</Amount>
+		<in_discount>
+			<discount_rate></discount_rate>
+			<amount_after_discount></amount_after_discount>
+		</in_discount>
+	</Item>
+	<Date>02/05/2018</Date>
+	<Billing_Address>Fragouli Foutri 49</Billing_Address>
+	<Shipping_Address></Shipping_Address>
+	<TotalAmount>45</TotalAmount>
+</Invoice>
+<Receipt CodeNo="40">
+	<Customer>
+		<First_Name>Andreas</First_Name>
+		<Middle_Name>Iosif</Middle_Name>
+		<Last_Name></Last_Name>
+	</Customer>
+
+	<Item item_category = "la" Quantity = "1">
+		<Description>The best Item in the world</Description>
+		<Initial_Price>15</Initial_Price>
+		<Amount>15</Amount>
+		<in_discount>
+			<discount_rate></discount_rate>
+			<amount_after_discount></amount_after_discount>
+		</in_discount>		
+	</Item>
+	<Date>03/05/2018</Date>
+	<Billing_Address>Agaphs 17</Billing_Address>
+	<Shipping_Address>Peukon 59</Shipping_Address>
+	<TotalAmount>15</TotalAmount>
+</Receipt>
+</InvoiceList>
